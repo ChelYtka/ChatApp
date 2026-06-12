@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>860</width><height>560</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>Чат</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="centralLayout">
+    <property name="spacing"><number>0</number></property>
+    <property name="margin"><number>0</number></property>
+
+    <!-- ══ ЛЕВАЯ ПАНЕЛЬ ══ -->
+    <item>
+     <widget class="QWidget" name="leftPanel">
+      <property name="minimumWidth"><number>220</number></property>
+      <property name="maximumWidth"><number>260</number></property>
+      <layout class="QVBoxLayout" name="leftLayout">
+       <property name="spacing"><number>8</number></property>
+       <property name="margin"><number>12</number></property>
+
+       <!-- Аватар + имя профиля -->
+       <item>
+        <widget class="QLabel" name="profileLabel">
+         <property name="text"><string>Профиль</string></property>
+         <property name="alignment">
+          <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+
+       <!-- Кнопка смены профиля -->
+       <item>
+        <widget class="QPushButton" name="switchProfileBtn">
+         <property name="text"><string>Сменить профиль</string></property>
+        </widget>
+       </item>
+
+       <!-- Разделитель -->
+       <item>
+        <widget class="QFrame" name="line">
+         <property name="frameShape"><enum>QFrame::HLine</enum></property>
+         <property name="frameShadow"><enum>QFrame::Sunken</enum></property>
+        </widget>
+       </item>
+
+       <!-- Поиск чатов -->
+       <item>
+        <widget class="QLineEdit" name="searchEdit">
+         <property name="placeholderText"><string>🔍 Поиск чатов...</string></property>
+        </widget>
+       </item>
+
+       <!-- Список чатов -->
+       <item>
+        <widget class="QListWidget" name="chatList"/>
+       </item>
+
+       <!-- Кнопки управления чатами -->
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QPushButton" name="newChatBtn">
+           <property name="text"><string>+ Новый чат</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="deleteChatBtn">
+           <property name="text"><string>Удалить</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+    <!-- ══ ПРАВАЯ ПАНЕЛЬ ══ -->
+    <item>
+     <widget class="QWidget" name="rightPanel">
+      <layout class="QVBoxLayout" name="rightLayout">
+       <property name="spacing"><number>8</number></property>
+       <property name="margin"><number>12</number></property>
+
+       <!-- Заголовок чата -->
+       <item>
+        <widget class="QLabel" name="chatTitleLabel">
+         <property name="text"><string>Выберите чат</string></property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+
+       <!-- Область сообщений (ScrollArea) -->
+       <item >
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable"><bool>true</bool></property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <widget class="QWidget" name="scrollContents">
+          <layout class="QVBoxLayout" name="bubblesLayout">
+           <property name="spacing"><number>6</number></property>
+           <property name="margin"><number>10</number></property>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+
+       <!-- Строка ввода -->
+       <item>
+        <layout class="QHBoxLayout" name="inputRow">
+         <property name="spacing"><number>8</number></property>
+         <item>
+          <widget class="QLineEdit" name="inputEdit">
+           <property name="placeholderText"><string>Введите сообщение...</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="sendBtn">
+           <property name="text"><string>Отправить</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="deleteMsgBtn">
+           <property name="text"><string>Удалить</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+
+      </layout>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+</ui>

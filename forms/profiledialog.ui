@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProfileDialog</class>
+ <widget class="QDialog" name="ProfileDialog">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>340</width><height>300</height></rect>
+  </property>
+  <property name="windowTitle"><string>Выбор профиля</string></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="spacing"><number>10</number></property>
+   <property name="margin"><number>16</number></property>
+
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text"><string>Выберите профиль для входа:</string></property>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QListWidget" name="profileList"/>
+   </item>
+
+   <item>
+    <layout class="QHBoxLayout">
+     <item>
+      <widget class="QPushButton" name="createBtn">
+       <property name="text"><string>Создать</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="deleteBtn">
+       <property name="text"><string>Удалить</string></property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="selectBtn">
+       <property name="text"><string>Войти</string></property>
+       <property name="default"><bool>true</bool></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+
+  </layout>
+ </widget>
+</ui>
