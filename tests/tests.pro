@@ -7,7 +7,7 @@ CONFIG  += c++17 console
 CONFIG  -= app_bundle
 
 # Подключаем исходники основного приложения
-INCLUDEPATH += $$PWD/../../
+INCLUDEPATH += ../src
 
 SOURCES += \
     tst_chatapp.cpp \
